@@ -31,6 +31,7 @@ namespace Tupiniquim.ConsoleApp
                     Console.WriteLine("Digite suas cordenadas: ");
 
                     posicaoinicial = Console.ReadLine().Split(" ");
+                    
 
                     for (int i = 0; i < posicaoinicial.Length; i++)
                     {
@@ -40,12 +41,14 @@ namespace Tupiniquim.ConsoleApp
                             posicaoy = Convert.ToInt32(posicaoinicial[i]);
                         else if (i == 2)
                             lado = posicaoinicial[i];
+                            lado = lado.ToUpper();
 
 
                     }
 
                     Console.WriteLine("Digite o comando: ");
                     comandorecebido = Console.ReadLine();
+                    comandorecebido =comandorecebido.ToUpper(); 
 
 
                 
@@ -54,58 +57,58 @@ namespace Tupiniquim.ConsoleApp
 
                 {
 
-                    if (comando == 'e' && lado == "n")
+                    if (comando == 'E' && lado == "N")
                     {
-                        lado = "o";
+                        lado = "O";
                     }
-                    else if (comando == 'e' && lado == "o")
+                    else if (comando == 'E' && lado == "O")
                     {
-                        lado = "s";
+                        lado = "S";
                     }
-                    else if (comando == 'e' && lado == "s")
+                    else if (comando == 'E' && lado == "S")
                     {
-                        lado = "l";
+                        lado = "L";
                     }
-                    else if (comando == 'e' && lado == "l")
+                    else if (comando == 'E' && lado == "L")
                     {
-                        lado = "n";
-                    }
-
-
-
-                    if (comando == 'd' && lado == "n")
-                    {
-                        lado = "l";
-                    }
-                    else if (comando == 'd' && lado == "o")
-                    {
-                        lado = "n";
-                    }
-                    else if (comando == 'd' && lado == "s")
-                    {
-                        lado = "o";
-                    }
-                    else if (comando == 'd' && lado == "l")
-                    {
-                        lado = "s";
+                        lado = "N";
                     }
 
 
 
+                    if (comando == 'D' && lado == "N")
+                    {
+                        lado = "L";
+                    }
+                    else if (comando == 'D' && lado == "O")
+                    {
+                        lado = "N";
+                    }
+                    else if (comando == 'D' && lado == "S")
+                    {
+                        lado = "O";
+                    }
+                    else if (comando == 'D' && lado == "L")
+                    {
+                        lado = "S";
+                    }
 
-                    if (comando == 'm' && lado == "n")
+
+
+
+                    if (comando == 'M' && lado == "N")
                     {
                         posicaoy++;
                     }
-                    else if (comando == 'm' && lado == "o")
+                    else if (comando == 'M' && lado == "O")
                     {
                         posicaox--;
                     }
-                    else if (comando == 'm' && lado == "s")
+                    else if (comando == 'M' && lado == "S")
                     {
                         posicaoy--;
                     }
-                    else if (comando == 'm' && lado == "l")
+                    else if (comando == 'M' && lado == "L")
                     {
                         posicaox++;
                     }
